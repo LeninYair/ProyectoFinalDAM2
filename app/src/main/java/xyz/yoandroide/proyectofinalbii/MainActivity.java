@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Button login;
         Button register;
 
+
         usuario=(EditText) findViewById(R.id.eTxtUsuario);
         clave=(EditText)  findViewById(R.id.eTxtClave);
         login=(Button) findViewById(R.id.btnLogin);
@@ -40,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,createAcount.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
